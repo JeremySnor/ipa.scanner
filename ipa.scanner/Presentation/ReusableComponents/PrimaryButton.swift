@@ -11,11 +11,18 @@ struct PrimaryButton: View {
     
     let title: String
     var idealWidth: CGFloat = 100
+    var loading: Binding<Bool>? = nil
     let action: () -> Void
     
     var body: some View {
         Button(title, action: action)
-            .buttonStyle(PrimaryButtonStyle(idealWidth: idealWidth))
+            .buttonStyle(
+                PrimaryButtonStyle(
+                    idealWidth: idealWidth,
+                    loading: loading
+                )
+            )
+            .disabled(loading?.wrappedValue == true)
     }
     
 }
@@ -23,11 +30,10 @@ struct PrimaryButton: View {
 struct PrimaryButtonStyle: ButtonStyle {
     
     let idealWidth: CGFloat
+    var loading: Binding<Bool>?
     
     func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .font(.system(size: 14, weight: .medium))
-            .foregroundStyle(.white)
+        content(configuration: configuration)
             .padding(.horizontal, 14)
             .frame(maxWidth: idealWidth)
             .frame(height: 40)
@@ -35,15 +41,34 @@ struct PrimaryButtonStyle: ButtonStyle {
             .clipShape(RoundedRectangle(cornerRadius: 12))
     }
     
+    @ViewBuilder
+    private func content(configuration: Configuration) -> some View {
+        if let loading, loading.wrappedValue {
+            ProgressView()
+                .controlSize(.small)
+                .colorInvert()
+                .brightness(1)
+        } else {
+            configuration.label
+                .font(.system(size: 14, weight: .medium))
+                .foregroundStyle(.white)
+        }
+    }
+    
 }
 
 #Preview {
-    ZStack {
+    VStack {
         PrimaryButton(
             title: "Continue",
             action: { }
         )
-        .fixedSize()
+        
+        PrimaryButton(
+            title: "Continue",
+            loading: .constant(true),
+            action: { }
+        )
     }
     .frame(width: 300, height: 300, alignment: .center)
 }
