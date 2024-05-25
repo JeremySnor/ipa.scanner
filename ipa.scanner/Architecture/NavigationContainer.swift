@@ -40,6 +40,20 @@ struct NavigationContainer<PB: PageBuilder>: View {
                     )
                 }
             )
+            .alert(
+                "Ошибка",
+                isPresented: $navigationContext.isErrorPresented,
+                presenting: navigationContext.error,
+                actions: { _ in
+                    Button(
+                        "Хорошо",
+                        action: { navigationContext.hideError() }
+                    )
+                },
+                message: { error in
+                    Text(error.localizedDescription)
+                }
+            )
         }
     }
     

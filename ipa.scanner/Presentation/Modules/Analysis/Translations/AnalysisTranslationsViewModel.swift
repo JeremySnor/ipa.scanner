@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AnalysisTranslationsViewModel: ViewModel {
+class AnalysisTranslationsViewModel: ViewModel<AnalysisTranslationsAction> {
     
     
     

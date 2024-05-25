@@ -22,19 +22,24 @@ struct MainSelectFileView: View {
                 PrimaryButton(
                     title: "Выбрать файл",
                     idealWidth: 160,
-                    action: viewModel.selectFile
+                    action: { viewModel.handleAction(.openFileSelector) }
                 )
                 
                 if viewModel.isAcceptVisible {
                     PrimaryButton(
                         title: "Продолжить",
                         idealWidth: 160,
-                        action: viewModel.selectFile
+                        action: { viewModel.handleAction(.accept) }
                     )
                 }
             }
         }
         .navigationTitle("ipa Scanner")
+        .fileImporter(
+            isPresented: $viewModel.fileImporterPresented,
+            allowedContentTypes: [.data],
+            onCompletion: { viewModel.handleAction(.processFileImporterResult($0)) }
+        )
     }
     
 }
