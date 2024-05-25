@@ -7,29 +7,46 @@
 
 import Foundation
 
-class MainSelectFileViewModel: ViewModel {
+class MainSelectFileViewModel: ViewModel<MainSelectFileAction> {
+    
+    // MARK: - Bindings
     
     @Published
-    var selectedFileName: String?
+    var fileImporterPresented: Bool = false
+    
+    @Published
+    var selectedIpaURL: URL?
     
     var hintText: String {
-        if selectedFileName == nil {
-            return "Для начала необходимо выбрать .ipa файл"
+        if let selectedIpaURL {
+            return "Нажмите \"Продолжить\" чтобы использовать \(selectedIpaURL.lastPathComponent) или выберите другой файл"
         } else {
-            return "Нажмите \"продолжить\" или выберите другой файл"
+            return "Для начала необходимо выбрать .ipa файл"
         }
     }
     
+    var selectedIpaName: String? {
+        selectedIpaURL?.lastPathComponent
+    }
+    
     var isAcceptVisible: Bool {
-        selectedFileName != nil
+        selectedIpaURL != nil
     }
     
-    func selectFile() {
-        
-    }
+    // MARK: - Actions
     
-    func accept() {
-        navigationContext.push(page: AnalysisModulePage.translations)
+    override func processAction(_ action: MainSelectFileAction) async throws {
+        switch action {
+        case .openFileSelector:
+            await updateBinding { fileImporterPresented = true }
+            
+        case let .processFileImporterResult(importerResult):
+            let url = try await FileSelectingFlow(importerResult: importerResult).execute()
+            await updateBinding { selectedIpaURL = url }
+            
+        case .accept:
+            break
+        }
     }
     
 }

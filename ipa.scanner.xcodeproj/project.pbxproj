@@ -23,6 +23,9 @@
 		D6F7A4252C02698D00A8AB16 /* AnalysisTranslationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A4242C02698D00A8AB16 /* AnalysisTranslationsView.swift */; };
 		D6F7A4272C026CD800A8AB16 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A4262C026CD800A8AB16 /* PrimaryButton.swift */; };
 		D6F7A4292C026FDA00A8AB16 /* TextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A4282C026FDA00A8AB16 /* TextLabel.swift */; };
+		D6F7A42D2C02743A00A8AB16 /* FileSelectingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A42C2C02743A00A8AB16 /* FileSelectingFlow.swift */; };
+		D6F7A42F2C0275E200A8AB16 /* MainSelectFileAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A42E2C0275E200A8AB16 /* MainSelectFileAction.swift */; };
+		D6F7A4312C027AAA00A8AB16 /* AnalysisTranslationsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A4302C027AAA00A8AB16 /* AnalysisTranslationsAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		D6F7A4242C02698D00A8AB16 /* AnalysisTranslationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisTranslationsView.swift; sourceTree = "<group>"; };
 		D6F7A4262C026CD800A8AB16 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		D6F7A4282C026FDA00A8AB16 /* TextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabel.swift; sourceTree = "<group>"; };
+		D6F7A42C2C02743A00A8AB16 /* FileSelectingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSelectingFlow.swift; sourceTree = "<group>"; };
+		D6F7A42E2C0275E200A8AB16 /* MainSelectFileAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSelectFileAction.swift; sourceTree = "<group>"; };
+		D6F7A4302C027AAA00A8AB16 /* AnalysisTranslationsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisTranslationsAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,8 @@
 				D6F7A4072C0124E100A8AB16 /* Architecture */,
 				D6F7A4062C01245E00A8AB16 /* Resources */,
 				D6F7A4032C01242B00A8AB16 /* Presentation */,
+				D6F7A42B2C02741C00A8AB16 /* Services */,
+				D6F7A42A2C02741000A8AB16 /* Flow */,
 			);
 			path = ipa.scanner;
 			sourceTree = "<group>";
@@ -145,6 +153,7 @@
 		D6F7A41B2C02639700A8AB16 /* SelectFile */ = {
 			isa = PBXGroup;
 			children = (
+				D6F7A42E2C0275E200A8AB16 /* MainSelectFileAction.swift */,
 				D6F7A40F2C025E5300A8AB16 /* MainSelectFileViewModel.swift */,
 				D6F7A4112C025E6C00A8AB16 /* MainSelectFileView.swift */,
 			);
@@ -163,10 +172,26 @@
 		D6F7A4212C02696000A8AB16 /* Translations */ = {
 			isa = PBXGroup;
 			children = (
+				D6F7A4302C027AAA00A8AB16 /* AnalysisTranslationsAction.swift */,
 				D6F7A4222C02697B00A8AB16 /* AnalysisTranslationsViewModel.swift */,
 				D6F7A4242C02698D00A8AB16 /* AnalysisTranslationsView.swift */,
 			);
 			path = Translations;
+			sourceTree = "<group>";
+		};
+		D6F7A42A2C02741000A8AB16 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				D6F7A42C2C02743A00A8AB16 /* FileSelectingFlow.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		D6F7A42B2C02741C00A8AB16 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,14 +263,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6F7A42F2C0275E200A8AB16 /* MainSelectFileAction.swift in Sources */,
 				D6F7A4292C026FDA00A8AB16 /* TextLabel.swift in Sources */,
 				D6F7A40B2C01252C00A8AB16 /* NavigationContainer.swift in Sources */,
 				D6F7A41A2C02628E00A8AB16 /* ViewModel.swift in Sources */,
 				D6F7A4182C02604C00A8AB16 /* PageBuilder.swift in Sources */,
 				D6F7A4102C025E5300A8AB16 /* MainSelectFileViewModel.swift in Sources */,
+				D6F7A4312C027AAA00A8AB16 /* AnalysisTranslationsAction.swift in Sources */,
 				D6F7A4272C026CD800A8AB16 /* PrimaryButton.swift in Sources */,
 				D6F7A4232C02697B00A8AB16 /* AnalysisTranslationsViewModel.swift in Sources */,
 				D6F7A4122C025E6C00A8AB16 /* MainSelectFileView.swift in Sources */,
+				D6F7A42D2C02743A00A8AB16 /* FileSelectingFlow.swift in Sources */,
 				D6F7A3F52C01210400A8AB16 /* IpaScannerApp.swift in Sources */,
 				D6F7A4092C01250900A8AB16 /* NavigationContext.swift in Sources */,
 				D6F7A40D2C01256C00A8AB16 /* Page.swift in Sources */,
