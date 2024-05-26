@@ -27,7 +27,7 @@ final class NavigationContext: ObservableObject {
 @MainActor
 extension NavigationContext {
     
-    func push(page: Page) {
+    func push<P: Page>(page: P) {
         pages.append(page)
     }
     

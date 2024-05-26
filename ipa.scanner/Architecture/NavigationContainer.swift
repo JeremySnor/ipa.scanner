@@ -16,12 +16,12 @@ struct NavigationContainer<PB: PageBuilder>: View {
     var navigationContext: NavigationContext
     
     @ViewBuilder
-    let root: Page
+    let root: PB.PAGE
     
     init(
         pageBuilder: PB,
         navigationContext: NavigationContext,
-        root: Page
+        root: PB.PAGE
     ) {
         self.pageBuilder = pageBuilder
         self.navigationContext = navigationContext
@@ -35,7 +35,7 @@ struct NavigationContainer<PB: PageBuilder>: View {
                 navigationContext: navigationContext
             )
             .navigationDestination(
-                for: Page.self,
+                for: PB.PAGE.self,
                 destination: { page in
                     pageBuilder.destinationFor(
                         page: page,

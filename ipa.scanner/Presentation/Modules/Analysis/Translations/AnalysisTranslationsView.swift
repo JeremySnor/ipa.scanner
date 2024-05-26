@@ -21,6 +21,7 @@ struct AnalysisTranslationsView: View {
 #Preview {
     AnalysisTranslationsView(
         viewModel: AnalysisTranslationsViewModel(
+            localizationCollection: LocalizationCollection(),
             navigationContext: NavigationContext()
         )
     )

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ModulePageBuilder: PageBuilder {
+class ApplicationPageBuilder: PageBuilder {
     
     let dependencies: Dependencies
     
@@ -16,12 +16,12 @@ class ModulePageBuilder: PageBuilder {
     }
     
     func destinationFor(
-        page: Page,
+        page: ApplicationPage,
         navigationContext: NavigationContext
     ) -> PageView {
         
         switch page {
-        case MainModulePage.selectFile:
+        case .mainSelectFile:
             let viewModel = MainSelectFileViewModel(
                 shellService: dependencies.shellService,
                 finderService: dependencies.finderService,
@@ -30,12 +30,12 @@ class ModulePageBuilder: PageBuilder {
             )
             return MainSelectFileView(viewModel: viewModel).asPageView()
             
-        case AnalysisModulePage.translations:
-            let viewModel = AnalysisTranslationsViewModel(navigationContext: navigationContext)
+        case let .analysisTranslations(localizationCollection):
+            let viewModel = AnalysisTranslationsViewModel(
+                localizationCollection: localizationCollection,
+                navigationContext: navigationContext
+            )
             return AnalysisTranslationsView(viewModel: viewModel).asPageView()
-            
-        default:
-            fatalError("Undefined page")
         }
         
     }

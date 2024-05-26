@@ -77,8 +77,9 @@ class MainSelectFileViewModel: ViewModel<MainSelectFileAction> {
                 finderService: finderService,
                 localizationCollectorService: localizationCollectorService
             )
-            try await flow.execute()
+            let localizationCollection = try await flow.execute()
             await updateBinding { ipaProcessing = false }
+            await navigationContext.push(page: ApplicationPage.analysisTranslations(localizationCollection: localizationCollection))
         }
     }
     

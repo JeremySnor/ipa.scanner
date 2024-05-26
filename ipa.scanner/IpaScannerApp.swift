@@ -18,9 +18,9 @@ struct IpaScannerApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationContainer(
-                pageBuilder: ModulePageBuilder(dependencies: dependencies),
+                pageBuilder: ApplicationPageBuilder(dependencies: dependencies),
                 navigationContext: navigationContext,
-                root: MainModulePage.selectFile
+                root: .mainSelectFile
             )
         }
         .windowResizability(.contentMinSize)
