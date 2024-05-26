@@ -11,5 +11,6 @@ protocol Dependencies {
     
     var shellService: ShellService { get }
     var finderService: FinderService { get }
+    var localizationCollectorService: LocalizationCollectorService { get }
     
 }
