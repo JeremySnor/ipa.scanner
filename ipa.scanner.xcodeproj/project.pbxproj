@@ -26,6 +26,17 @@
 		D6F7A42D2C02743A00A8AB16 /* FileSelectingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A42C2C02743A00A8AB16 /* FileSelectingFlow.swift */; };
 		D6F7A42F2C0275E200A8AB16 /* MainSelectFileAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A42E2C0275E200A8AB16 /* MainSelectFileAction.swift */; };
 		D6F7A4312C027AAA00A8AB16 /* AnalysisTranslationsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A4302C027AAA00A8AB16 /* AnalysisTranslationsAction.swift */; };
+		D6F7A4342C028B0700A8AB16 /* FileAnalysingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A4332C028B0700A8AB16 /* FileAnalysingFlow.swift */; };
+		D6F7A4372C028B5E00A8AB16 /* ShellService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A4362C028B5E00A8AB16 /* ShellService.swift */; };
+		D6F7A43A2C02A0D200A8AB16 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A4392C02A0D200A8AB16 /* Collection.swift */; };
+		D6F7A43C2C02A18000A8AB16 /* ShellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A43B2C02A18000A8AB16 /* ShellType.swift */; };
+		D6F7A43E2C02A1A500A8AB16 /* ShellResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A43D2C02A1A500A8AB16 /* ShellResult.swift */; };
+		D6F7A4402C02A75D00A8AB16 /* ShellServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A43F2C02A75D00A8AB16 /* ShellServiceError.swift */; };
+		D6F7A4422C02A76F00A8AB16 /* ShellStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A4412C02A76F00A8AB16 /* ShellStatusCode.swift */; };
+		D6F7A4452C02A82E00A8AB16 /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A4442C02A82E00A8AB16 /* Printer.swift */; };
+		D6F7A4472C02AD8F00A8AB16 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A4462C02AD8F00A8AB16 /* Dependencies.swift */; };
+		D6F7A4492C02ADD500A8AB16 /* ApplicationDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A4482C02ADD500A8AB16 /* ApplicationDependencies.swift */; };
+		D6F7A44C2C02B50300A8AB16 /* FinderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A44B2C02B50300A8AB16 /* FinderService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +61,18 @@
 		D6F7A42C2C02743A00A8AB16 /* FileSelectingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSelectingFlow.swift; sourceTree = "<group>"; };
 		D6F7A42E2C0275E200A8AB16 /* MainSelectFileAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSelectFileAction.swift; sourceTree = "<group>"; };
 		D6F7A4302C027AAA00A8AB16 /* AnalysisTranslationsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisTranslationsAction.swift; sourceTree = "<group>"; };
+		D6F7A4322C02886900A8AB16 /* ipa-scanner-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ipa-scanner-Info.plist"; path = "ipa.scanner/Resources/ipa-scanner-Info.plist"; sourceTree = SOURCE_ROOT; };
+		D6F7A4332C028B0700A8AB16 /* FileAnalysingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileAnalysingFlow.swift; sourceTree = "<group>"; };
+		D6F7A4362C028B5E00A8AB16 /* ShellService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellService.swift; sourceTree = "<group>"; };
+		D6F7A4392C02A0D200A8AB16 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		D6F7A43B2C02A18000A8AB16 /* ShellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellType.swift; sourceTree = "<group>"; };
+		D6F7A43D2C02A1A500A8AB16 /* ShellResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellResult.swift; sourceTree = "<group>"; };
+		D6F7A43F2C02A75D00A8AB16 /* ShellServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellServiceError.swift; sourceTree = "<group>"; };
+		D6F7A4412C02A76F00A8AB16 /* ShellStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellStatusCode.swift; sourceTree = "<group>"; };
+		D6F7A4442C02A82E00A8AB16 /* Printer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
+		D6F7A4462C02AD8F00A8AB16 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		D6F7A4482C02ADD500A8AB16 /* ApplicationDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDependencies.swift; sourceTree = "<group>"; };
+		D6F7A44B2C02B50300A8AB16 /* FinderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +111,8 @@
 				D6F7A4032C01242B00A8AB16 /* Presentation */,
 				D6F7A42B2C02741C00A8AB16 /* Services */,
 				D6F7A42A2C02741000A8AB16 /* Flow */,
+				D6F7A4432C02A81C00A8AB16 /* Support */,
+				D6F7A4382C02A0BE00A8AB16 /* Extensions */,
 			);
 			path = ipa.scanner;
 			sourceTree = "<group>";
@@ -123,8 +148,10 @@
 		D6F7A4062C01245E00A8AB16 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D6F7A4322C02886900A8AB16 /* ipa-scanner-Info.plist */,
 				D6F7A3F82C01210600A8AB16 /* Assets.xcassets */,
 				D6F7A3FD2C01210600A8AB16 /* ipa_scanner.entitlements */,
+				D6F7A4482C02ADD500A8AB16 /* ApplicationDependencies.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -137,6 +164,7 @@
 				D6F7A40C2C01256C00A8AB16 /* Page.swift */,
 				D6F7A4172C02604C00A8AB16 /* PageBuilder.swift */,
 				D6F7A4192C02628E00A8AB16 /* ViewModel.swift */,
+				D6F7A4462C02AD8F00A8AB16 /* Dependencies.swift */,
 			);
 			path = Architecture;
 			sourceTree = "<group>";
@@ -183,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				D6F7A42C2C02743A00A8AB16 /* FileSelectingFlow.swift */,
+				D6F7A4332C028B0700A8AB16 /* FileAnalysingFlow.swift */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -190,8 +219,46 @@
 		D6F7A42B2C02741C00A8AB16 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D6F7A44A2C02B4F700A8AB16 /* FinderService */,
+				D6F7A4352C028B5000A8AB16 /* ShellService */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		D6F7A4352C028B5000A8AB16 /* ShellService */ = {
+			isa = PBXGroup;
+			children = (
+				D6F7A43B2C02A18000A8AB16 /* ShellType.swift */,
+				D6F7A4362C028B5E00A8AB16 /* ShellService.swift */,
+				D6F7A43F2C02A75D00A8AB16 /* ShellServiceError.swift */,
+				D6F7A4412C02A76F00A8AB16 /* ShellStatusCode.swift */,
+				D6F7A43D2C02A1A500A8AB16 /* ShellResult.swift */,
+			);
+			path = ShellService;
+			sourceTree = "<group>";
+		};
+		D6F7A4382C02A0BE00A8AB16 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D6F7A4392C02A0D200A8AB16 /* Collection.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D6F7A4432C02A81C00A8AB16 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				D6F7A4442C02A82E00A8AB16 /* Printer.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		D6F7A44A2C02B4F700A8AB16 /* FinderService */ = {
+			isa = PBXGroup;
+			children = (
+				D6F7A44B2C02B50300A8AB16 /* FinderService.swift */,
+			);
+			path = FinderService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,22 +330,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6F7A4422C02A76F00A8AB16 /* ShellStatusCode.swift in Sources */,
 				D6F7A42F2C0275E200A8AB16 /* MainSelectFileAction.swift in Sources */,
+				D6F7A43E2C02A1A500A8AB16 /* ShellResult.swift in Sources */,
 				D6F7A4292C026FDA00A8AB16 /* TextLabel.swift in Sources */,
+				D6F7A4372C028B5E00A8AB16 /* ShellService.swift in Sources */,
 				D6F7A40B2C01252C00A8AB16 /* NavigationContainer.swift in Sources */,
 				D6F7A41A2C02628E00A8AB16 /* ViewModel.swift in Sources */,
 				D6F7A4182C02604C00A8AB16 /* PageBuilder.swift in Sources */,
 				D6F7A4102C025E5300A8AB16 /* MainSelectFileViewModel.swift in Sources */,
 				D6F7A4312C027AAA00A8AB16 /* AnalysisTranslationsAction.swift in Sources */,
 				D6F7A4272C026CD800A8AB16 /* PrimaryButton.swift in Sources */,
+				D6F7A4492C02ADD500A8AB16 /* ApplicationDependencies.swift in Sources */,
+				D6F7A4342C028B0700A8AB16 /* FileAnalysingFlow.swift in Sources */,
 				D6F7A4232C02697B00A8AB16 /* AnalysisTranslationsViewModel.swift in Sources */,
 				D6F7A4122C025E6C00A8AB16 /* MainSelectFileView.swift in Sources */,
+				D6F7A43A2C02A0D200A8AB16 /* Collection.swift in Sources */,
+				D6F7A4452C02A82E00A8AB16 /* Printer.swift in Sources */,
 				D6F7A42D2C02743A00A8AB16 /* FileSelectingFlow.swift in Sources */,
 				D6F7A3F52C01210400A8AB16 /* IpaScannerApp.swift in Sources */,
 				D6F7A4092C01250900A8AB16 /* NavigationContext.swift in Sources */,
 				D6F7A40D2C01256C00A8AB16 /* Page.swift in Sources */,
 				D6F7A41D2C0263A900A8AB16 /* ModulePageBuilder.swift in Sources */,
+				D6F7A4472C02AD8F00A8AB16 /* Dependencies.swift in Sources */,
+				D6F7A43C2C02A18000A8AB16 /* ShellType.swift in Sources */,
+				D6F7A44C2C02B50300A8AB16 /* FinderService.swift in Sources */,
 				D6F7A4202C02692B00A8AB16 /* AnalysisModulePage.swift in Sources */,
+				D6F7A4402C02A75D00A8AB16 /* ShellServiceError.swift in Sources */,
 				D6F7A4142C025FAC00A8AB16 /* MainModulePage.swift in Sources */,
 				D6F7A4252C02698D00A8AB16 /* AnalysisTranslationsView.swift in Sources */,
 			);
@@ -418,6 +496,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ipa.scanner/Resources/ipa-scanner-Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -444,6 +523,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ipa.scanner/Resources/ipa-scanner-Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -22,7 +22,6 @@ struct IpaScannerApp: App {
                 navigationContext: navigationContext,
                 root: MainModulePage.selectFile
             )
-            .frame(width: 1366, height: 768, alignment: .center)
         }
         .windowResizability(.contentMinSize)
     }
