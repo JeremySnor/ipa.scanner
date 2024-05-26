@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ViewModel<Action>: ObservableObject {
+class ViewModel<Action>: ObservableObject, Printer {
     
     let navigationContext: NavigationContext
     
@@ -25,6 +25,9 @@ class ViewModel<Action>: ObservableObject {
             do {
                 try await processAction(action)
             } catch {
+                #if DEBUG
+                print(error: error)
+                #endif
                 await navigationContext.showError(error)
             }
         }

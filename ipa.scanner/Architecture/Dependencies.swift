@@ -10,5 +10,6 @@ import Foundation
 protocol Dependencies {
     
     var shellService: ShellService { get }
+    var finderService: FinderService { get }
     
 }
