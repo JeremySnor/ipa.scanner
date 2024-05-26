@@ -7,10 +7,14 @@
 
 import Foundation
 
-class Localization {
+class Localization: Identifiable {
     
     let key: String
     private(set) var storage: [Locale: LocalizationValue]
+    
+    var id: String {
+        key
+    }
     
     init(
         key: String,

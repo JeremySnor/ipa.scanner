@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LocalizationCollection {
+final class LocalizationCollection {
     
     private(set) var locales: Set<Locale> = []
     private(set) var storage: [String: Localization] = [:]
@@ -35,6 +35,12 @@ class LocalizationCollection {
         }
     }
     
+    #if DEBUG
+    func appendLocale(_ locale: Locale) {
+        locales.insert(locale)
+    }
+    #endif
+    
     private func addValue(
         _ localizationValue: LocalizationValue,
         forKey key: String,
@@ -56,3 +62,24 @@ class LocalizationCollection {
     
 }
 
+#if DEBUG
+extension LocalizationCollection: Mock {
+    
+    static func mockInstance() -> LocalizationCollection {
+        let collection = LocalizationCollection()
+        
+        let ruLocale = Locale(identifier: "ru")
+        collection.appendLocale(ruLocale)
+        let enLocale = Locale(identifier: "en")
+        collection.appendLocale(enLocale)
+        
+        collection.addValue(.single("Привет"), forKey: "hello", intoLocale: ruLocale)
+        collection.addValue(.single("Hello"), forKey: "hello", intoLocale: enLocale)
+        
+        collection.addValue(.single("How are you?"), forKey: "how_are_you_question", intoLocale: enLocale)
+        
+        return collection
+    }
+    
+}
+#endif

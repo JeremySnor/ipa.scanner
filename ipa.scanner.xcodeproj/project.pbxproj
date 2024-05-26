@@ -40,6 +40,12 @@
 		D6F7A4532C03B6BF00A8AB16 /* LocalizationValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A4522C03B6BF00A8AB16 /* LocalizationValue.swift */; };
 		D6F7A4552C03B6D600A8AB16 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A4542C03B6D600A8AB16 /* Localization.swift */; };
 		D6F7A4572C03B9FB00A8AB16 /* ApplicationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A4562C03B9FB00A8AB16 /* ApplicationPage.swift */; };
+		D6F7A4592C03BF2200A8AB16 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A4582C03BF2200A8AB16 /* Mock.swift */; };
+		D6F7A45C2C03C1D600A8AB16 /* AnalysisTranslationsKeysList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A45B2C03C1D600A8AB16 /* AnalysisTranslationsKeysList.swift */; };
+		D6F7A45E2C03C2A000A8AB16 /* AnalysisTranslationsKeysListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A45D2C03C2A000A8AB16 /* AnalysisTranslationsKeysListRow.swift */; };
+		D6F7A4602C03D61100A8AB16 /* AnalysisTranslationsLocalizationInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A45F2C03D61100A8AB16 /* AnalysisTranslationsLocalizationInfoView.swift */; };
+		D6F7A4622C03D85200A8AB16 /* AnalysisTranslationsLocalizationValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A4612C03D85200A8AB16 /* AnalysisTranslationsLocalizationValueView.swift */; };
+		D6F7A4652C03D97900A8AB16 /* CardViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A4642C03D97900A8AB16 /* CardViewModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +85,12 @@
 		D6F7A4522C03B6BF00A8AB16 /* LocalizationValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationValue.swift; sourceTree = "<group>"; };
 		D6F7A4542C03B6D600A8AB16 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		D6F7A4562C03B9FB00A8AB16 /* ApplicationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationPage.swift; sourceTree = "<group>"; };
+		D6F7A4582C03BF2200A8AB16 /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
+		D6F7A45B2C03C1D600A8AB16 /* AnalysisTranslationsKeysList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisTranslationsKeysList.swift; sourceTree = "<group>"; };
+		D6F7A45D2C03C2A000A8AB16 /* AnalysisTranslationsKeysListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisTranslationsKeysListRow.swift; sourceTree = "<group>"; };
+		D6F7A45F2C03D61100A8AB16 /* AnalysisTranslationsLocalizationInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisTranslationsLocalizationInfoView.swift; sourceTree = "<group>"; };
+		D6F7A4612C03D85200A8AB16 /* AnalysisTranslationsLocalizationValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisTranslationsLocalizationValueView.swift; sourceTree = "<group>"; };
+		D6F7A4642C03D97900A8AB16 /* CardViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +149,7 @@
 			children = (
 				D6F7A4262C026CD800A8AB16 /* PrimaryButton.swift */,
 				D6F7A4282C026FDA00A8AB16 /* TextLabel.swift */,
+				D6F7A4642C03D97900A8AB16 /* CardViewModifier.swift */,
 			);
 			path = ReusableComponents;
 			sourceTree = "<group>";
@@ -172,6 +185,7 @@
 				D6F7A4172C02604C00A8AB16 /* PageBuilder.swift */,
 				D6F7A4192C02628E00A8AB16 /* ViewModel.swift */,
 				D6F7A4462C02AD8F00A8AB16 /* Dependencies.swift */,
+				D6F7A4582C03BF2200A8AB16 /* Mock.swift */,
 			);
 			path = Architecture;
 			sourceTree = "<group>";
@@ -205,6 +219,7 @@
 		D6F7A4212C02696000A8AB16 /* Translations */ = {
 			isa = PBXGroup;
 			children = (
+				D6F7A45A2C03C1B600A8AB16 /* Subviews */,
 				D6F7A4302C027AAA00A8AB16 /* AnalysisTranslationsAction.swift */,
 				D6F7A4222C02697B00A8AB16 /* AnalysisTranslationsViewModel.swift */,
 				D6F7A4242C02698D00A8AB16 /* AnalysisTranslationsView.swift */,
@@ -278,6 +293,17 @@
 			path = LocalizationCollectorService;
 			sourceTree = "<group>";
 		};
+		D6F7A45A2C03C1B600A8AB16 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				D6F7A45B2C03C1D600A8AB16 /* AnalysisTranslationsKeysList.swift */,
+				D6F7A45D2C03C2A000A8AB16 /* AnalysisTranslationsKeysListRow.swift */,
+				D6F7A45F2C03D61100A8AB16 /* AnalysisTranslationsLocalizationInfoView.swift */,
+				D6F7A4612C03D85200A8AB16 /* AnalysisTranslationsLocalizationValueView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -347,17 +373,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6F7A4622C03D85200A8AB16 /* AnalysisTranslationsLocalizationValueView.swift in Sources */,
 				D6F7A4422C02A76F00A8AB16 /* ShellStatusCode.swift in Sources */,
 				D6F7A42F2C0275E200A8AB16 /* MainSelectFileAction.swift in Sources */,
 				D6F7A43E2C02A1A500A8AB16 /* ShellResult.swift in Sources */,
 				D6F7A4292C026FDA00A8AB16 /* TextLabel.swift in Sources */,
 				D6F7A4372C028B5E00A8AB16 /* ShellService.swift in Sources */,
+				D6F7A45E2C03C2A000A8AB16 /* AnalysisTranslationsKeysListRow.swift in Sources */,
 				D6F7A40B2C01252C00A8AB16 /* NavigationContainer.swift in Sources */,
+				D6F7A4602C03D61100A8AB16 /* AnalysisTranslationsLocalizationInfoView.swift in Sources */,
 				D6F7A41A2C02628E00A8AB16 /* ViewModel.swift in Sources */,
 				D6F7A4182C02604C00A8AB16 /* PageBuilder.swift in Sources */,
+				D6F7A4652C03D97900A8AB16 /* CardViewModifier.swift in Sources */,
 				D6F7A4102C025E5300A8AB16 /* MainSelectFileViewModel.swift in Sources */,
 				D6F7A4312C027AAA00A8AB16 /* AnalysisTranslationsAction.swift in Sources */,
 				D6F7A4272C026CD800A8AB16 /* PrimaryButton.swift in Sources */,
+				D6F7A4592C03BF2200A8AB16 /* Mock.swift in Sources */,
 				D6F7A4492C02ADD500A8AB16 /* ApplicationDependencies.swift in Sources */,
 				D6F7A4342C028B0700A8AB16 /* FileAnalysingFlow.swift in Sources */,
 				D6F7A4232C02697B00A8AB16 /* AnalysisTranslationsViewModel.swift in Sources */,
@@ -367,6 +398,7 @@
 				D6F7A4452C02A82E00A8AB16 /* Printer.swift in Sources */,
 				D6F7A42D2C02743A00A8AB16 /* FileSelectingFlow.swift in Sources */,
 				D6F7A3F52C01210400A8AB16 /* IpaScannerApp.swift in Sources */,
+				D6F7A45C2C03C1D600A8AB16 /* AnalysisTranslationsKeysList.swift in Sources */,
 				D6F7A4512C0389BD00A8AB16 /* LocalizationCollection.swift in Sources */,
 				D6F7A4092C01250900A8AB16 /* NavigationContext.swift in Sources */,
 				D6F7A40D2C01256C00A8AB16 /* Page.swift in Sources */,
