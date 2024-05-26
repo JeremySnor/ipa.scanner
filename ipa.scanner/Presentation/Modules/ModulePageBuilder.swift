@@ -25,6 +25,7 @@ class ModulePageBuilder: PageBuilder {
             let viewModel = MainSelectFileViewModel(
                 shellService: dependencies.shellService,
                 finderService: dependencies.finderService,
+                localizationCollectorService: dependencies.localizationCollectorService,
                 navigationContext: navigationContext
             )
             return MainSelectFileView(viewModel: viewModel).asPageView()

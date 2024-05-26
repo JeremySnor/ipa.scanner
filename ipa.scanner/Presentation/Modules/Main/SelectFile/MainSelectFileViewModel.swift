@@ -13,16 +13,19 @@ class MainSelectFileViewModel: ViewModel<MainSelectFileAction> {
     
     private let shellService: ShellService
     private let finderService: FinderService
+    private let localizationCollectorService: LocalizationCollectorService
     
     // MARK: - Init
     
     init(
         shellService: ShellService,
         finderService: FinderService,
+        localizationCollectorService: LocalizationCollectorService,
         navigationContext: NavigationContext
     ) {
         self.shellService = shellService
         self.finderService = finderService
+        self.localizationCollectorService = localizationCollectorService
         super.init(navigationContext: navigationContext)
     }
     
@@ -71,7 +74,8 @@ class MainSelectFileViewModel: ViewModel<MainSelectFileAction> {
             let flow = FileAnalysingFlow(
                 ipaFileURL: selectedIpaURL,
                 shellService: shellService,
-                finderService: finderService
+                finderService: finderService,
+                localizationCollectorService: localizationCollectorService
             )
             try await flow.execute()
             await updateBinding { ipaProcessing = false }

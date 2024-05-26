@@ -50,6 +50,7 @@ struct MainSelectFileView: View {
         viewModel: MainSelectFileViewModel(
             shellService: ShellService(shellType: .bash),
             finderService: FinderService(fileManager: .default),
+            localizationCollectorService: LocalizationCollectorService(fileManager: .default),
             navigationContext: NavigationContext()
         )
     )

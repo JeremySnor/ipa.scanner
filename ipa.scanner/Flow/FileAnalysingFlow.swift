@@ -18,6 +18,7 @@ struct FileAnalysingFlow: Printer {
     let ipaFileURL: URL
     let shellService: ShellService
     let finderService: FinderService
+    let localizationCollectorService: LocalizationCollectorService
     
     func execute() async throws {
         let zipFileURL = ipaFileURL.deletingPathExtension().appendingPathExtension("zip")
@@ -48,6 +49,11 @@ struct FileAnalysingFlow: Printer {
         #if DEBUG
         let localizationDirectoriesNames = localizationDirectories.map { $0.lastPathComponent }
         print(info: "Found localization directories:\n" + localizationDirectoriesNames.joined(separator: "\n"))
+        #endif
+        
+        let localizationCollection = try localizationCollectorService.collect(fromDirectories: localizationDirectories)
+        #if DEBUG
+        print(info: "\(localizationCollection)")
         #endif
     }
     

@@ -9,7 +9,7 @@ import Foundation
 
 class FinderService: Printer {
     
-    let fileManager: FileManager
+    private let fileManager: FileManager
     
     init(fileManager: FileManager) {
         self.fileManager = fileManager
