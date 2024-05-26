@@ -37,6 +37,10 @@
 		D6F7A4472C02AD8F00A8AB16 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A4462C02AD8F00A8AB16 /* Dependencies.swift */; };
 		D6F7A4492C02ADD500A8AB16 /* ApplicationDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A4482C02ADD500A8AB16 /* ApplicationDependencies.swift */; };
 		D6F7A44C2C02B50300A8AB16 /* FinderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A44B2C02B50300A8AB16 /* FinderService.swift */; };
+		D6F7A44F2C02BED500A8AB16 /* LocalizationCollectorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A44E2C02BED500A8AB16 /* LocalizationCollectorService.swift */; };
+		D6F7A4512C0389BD00A8AB16 /* LocalizationCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A4502C0389BD00A8AB16 /* LocalizationCollection.swift */; };
+		D6F7A4532C03B6BF00A8AB16 /* LocalizationValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A4522C03B6BF00A8AB16 /* LocalizationValue.swift */; };
+		D6F7A4552C03B6D600A8AB16 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A4542C03B6D600A8AB16 /* Localization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +77,10 @@
 		D6F7A4462C02AD8F00A8AB16 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		D6F7A4482C02ADD500A8AB16 /* ApplicationDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDependencies.swift; sourceTree = "<group>"; };
 		D6F7A44B2C02B50300A8AB16 /* FinderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderService.swift; sourceTree = "<group>"; };
+		D6F7A44E2C02BED500A8AB16 /* LocalizationCollectorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationCollectorService.swift; sourceTree = "<group>"; };
+		D6F7A4502C0389BD00A8AB16 /* LocalizationCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationCollection.swift; sourceTree = "<group>"; };
+		D6F7A4522C03B6BF00A8AB16 /* LocalizationValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationValue.swift; sourceTree = "<group>"; };
+		D6F7A4542C03B6D600A8AB16 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +227,7 @@
 		D6F7A42B2C02741C00A8AB16 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D6F7A44D2C02BEC000A8AB16 /* LocalizationCollectorService */,
 				D6F7A44A2C02B4F700A8AB16 /* FinderService */,
 				D6F7A4352C028B5000A8AB16 /* ShellService */,
 			);
@@ -259,6 +268,17 @@
 				D6F7A44B2C02B50300A8AB16 /* FinderService.swift */,
 			);
 			path = FinderService;
+			sourceTree = "<group>";
+		};
+		D6F7A44D2C02BEC000A8AB16 /* LocalizationCollectorService */ = {
+			isa = PBXGroup;
+			children = (
+				D6F7A44E2C02BED500A8AB16 /* LocalizationCollectorService.swift */,
+				D6F7A4502C0389BD00A8AB16 /* LocalizationCollection.swift */,
+				D6F7A4522C03B6BF00A8AB16 /* LocalizationValue.swift */,
+				D6F7A4542C03B6D600A8AB16 /* Localization.swift */,
+			);
+			path = LocalizationCollectorService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,14 +364,18 @@
 				D6F7A4492C02ADD500A8AB16 /* ApplicationDependencies.swift in Sources */,
 				D6F7A4342C028B0700A8AB16 /* FileAnalysingFlow.swift in Sources */,
 				D6F7A4232C02697B00A8AB16 /* AnalysisTranslationsViewModel.swift in Sources */,
+				D6F7A44F2C02BED500A8AB16 /* LocalizationCollectorService.swift in Sources */,
 				D6F7A4122C025E6C00A8AB16 /* MainSelectFileView.swift in Sources */,
 				D6F7A43A2C02A0D200A8AB16 /* Collection.swift in Sources */,
 				D6F7A4452C02A82E00A8AB16 /* Printer.swift in Sources */,
 				D6F7A42D2C02743A00A8AB16 /* FileSelectingFlow.swift in Sources */,
 				D6F7A3F52C01210400A8AB16 /* IpaScannerApp.swift in Sources */,
+				D6F7A4512C0389BD00A8AB16 /* LocalizationCollection.swift in Sources */,
 				D6F7A4092C01250900A8AB16 /* NavigationContext.swift in Sources */,
 				D6F7A40D2C01256C00A8AB16 /* Page.swift in Sources */,
+				D6F7A4552C03B6D600A8AB16 /* Localization.swift in Sources */,
 				D6F7A41D2C0263A900A8AB16 /* ModulePageBuilder.swift in Sources */,
+				D6F7A4532C03B6BF00A8AB16 /* LocalizationValue.swift in Sources */,
 				D6F7A4472C02AD8F00A8AB16 /* Dependencies.swift in Sources */,
 				D6F7A43C2C02A18000A8AB16 /* ShellType.swift in Sources */,
 				D6F7A44C2C02B50300A8AB16 /* FinderService.swift in Sources */,
