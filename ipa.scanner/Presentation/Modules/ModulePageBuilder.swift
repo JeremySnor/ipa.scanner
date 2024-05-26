@@ -9,14 +9,23 @@ import Foundation
 
 class ModulePageBuilder: PageBuilder {
     
-    static func destinationFor(
+    let dependencies: Dependencies
+    
+    init(dependencies: Dependencies) {
+        self.dependencies = dependencies
+    }
+    
+    func destinationFor(
         page: Page,
         navigationContext: NavigationContext
     ) -> PageView {
         
         switch page {
         case MainModulePage.selectFile:
-            let viewModel = MainSelectFileViewModel(navigationContext: navigationContext)
+            let viewModel = MainSelectFileViewModel(
+                shellService: dependencies.shellService,
+                navigationContext: navigationContext
+            )
             return MainSelectFileView(viewModel: viewModel).asPageView()
             
         case AnalysisModulePage.translations:

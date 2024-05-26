@@ -9,7 +9,14 @@ import Foundation
 
 class ShellService: Printer {
     
-    func shell(_ shellType: ShellType = .bash, command: String, arguments: [String] = []) throws {
+    let shellType: ShellType
+    
+    init(shellType: ShellType) {
+        self.shellType = shellType
+    }
+    
+    @discardableResult
+    func shell(command: String, arguments: [String] = []) throws {
         let whichResult = which(command: command, usingShellType: shellType)
         guard whichResult.statusCode == .success else {
             throw ShellServiceError.commandNotFound(commandName: command, shellType: shellType)

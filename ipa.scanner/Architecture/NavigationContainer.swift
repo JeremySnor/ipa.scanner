@@ -10,6 +10,8 @@ import SwiftUI
 
 struct NavigationContainer<PB: PageBuilder>: View {
     
+    let pageBuilder: PB
+    
     @ObservedObject
     var navigationContext: NavigationContext
     
@@ -17,24 +19,25 @@ struct NavigationContainer<PB: PageBuilder>: View {
     let root: Page
     
     init(
-        pageBuilder: PB.Type,
+        pageBuilder: PB,
         navigationContext: NavigationContext,
         root: Page
     ) {
+        self.pageBuilder = pageBuilder
         self.navigationContext = navigationContext
         self.root = root
     }
     
     var body: some View {
         NavigationStack(path: $navigationContext.pages) {
-            PB.destinationFor(
+            pageBuilder.destinationFor(
                 page: root,
                 navigationContext: navigationContext
             )
             .navigationDestination(
                 for: Page.self,
                 destination: { page in
-                    PB.destinationFor(
+                    pageBuilder.destinationFor(
                         page: page,
                         navigationContext: navigationContext
                     )
