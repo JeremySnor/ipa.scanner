@@ -7,12 +7,8 @@
 
 import Foundation
 
-struct Page: Hashable, Identifiable {
+protocol Page: Hashable, Identifiable {
     
-    let id: String
-    
-    init(_ id: String) {
-        self.id = id
-    }
+    var id: String { get }
     
 }

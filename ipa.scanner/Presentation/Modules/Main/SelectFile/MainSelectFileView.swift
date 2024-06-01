@@ -29,6 +29,7 @@ struct MainSelectFileView: View {
                     PrimaryButton(
                         title: "Продолжить",
                         idealWidth: 160,
+                        loading: $viewModel.ipaProcessing,
                         action: { viewModel.handleAction(.accept) }
                     )
                 }
@@ -47,6 +48,9 @@ struct MainSelectFileView: View {
 #Preview {
     MainSelectFileView(
         viewModel: MainSelectFileViewModel(
+            shellService: ShellService(shellType: .bash),
+            finderService: FinderService(fileManager: .default),
+            localizationCollectorService: LocalizationCollectorService(fileManager: .default),
             navigationContext: NavigationContext()
         )
     )

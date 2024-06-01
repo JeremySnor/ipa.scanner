@@ -19,8 +19,12 @@ extension View {
 
 protocol PageBuilder {
     
-    static func destinationFor(
-        page: Page, 
+    associatedtype PAGE: Page
+    
+    var dependencies: Dependencies { get }
+    
+    func destinationFor(
+        page: PAGE,
         navigationContext: NavigationContext
     ) -> PageView
     

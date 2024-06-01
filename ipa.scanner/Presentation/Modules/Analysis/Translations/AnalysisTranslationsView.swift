@@ -13,7 +13,23 @@ struct AnalysisTranslationsView: View {
     var viewModel: AnalysisTranslationsViewModel
     
     var body: some View {
-        Color.black
+        ZStack {
+            Color.white
+            
+            HStack(spacing: 0) {
+                AnalysisTranslationsKeysList(
+                    localizations: viewModel.localizations,
+                    locales: viewModel.locales,
+                    selectedLocalization: $viewModel.selectedLocalization
+                )
+                .frame(width: 300)
+                
+                AnalysisTranslationsLocalizationInfoView(
+                    locales: viewModel.locales,
+                    localization: $viewModel.selectedLocalization
+                )
+            }
+        }
     }
     
 }
@@ -21,6 +37,7 @@ struct AnalysisTranslationsView: View {
 #Preview {
     AnalysisTranslationsView(
         viewModel: AnalysisTranslationsViewModel(
+            localizationCollection: .mockInstance(),
             navigationContext: NavigationContext()
         )
     )

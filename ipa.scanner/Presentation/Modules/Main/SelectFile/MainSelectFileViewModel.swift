@@ -9,6 +9,26 @@ import Foundation
 
 class MainSelectFileViewModel: ViewModel<MainSelectFileAction> {
     
+    // MARK: - Injections
+    
+    private let shellService: ShellService
+    private let finderService: FinderService
+    private let localizationCollectorService: LocalizationCollectorService
+    
+    // MARK: - Init
+    
+    init(
+        shellService: ShellService,
+        finderService: FinderService,
+        localizationCollectorService: LocalizationCollectorService,
+        navigationContext: NavigationContext
+    ) {
+        self.shellService = shellService
+        self.finderService = finderService
+        self.localizationCollectorService = localizationCollectorService
+        super.init(navigationContext: navigationContext)
+    }
+    
     // MARK: - Bindings
     
     @Published
@@ -16,6 +36,9 @@ class MainSelectFileViewModel: ViewModel<MainSelectFileAction> {
     
     @Published
     var selectedIpaURL: URL?
+    
+    @Published
+    var ipaProcessing: Bool = false
     
     var hintText: String {
         if let selectedIpaURL {
@@ -41,11 +64,22 @@ class MainSelectFileViewModel: ViewModel<MainSelectFileAction> {
             await updateBinding { fileImporterPresented = true }
             
         case let .processFileImporterResult(importerResult):
-            let url = try await FileSelectingFlow(importerResult: importerResult).execute()
+            let flow = FileSelectingFlow(importerResult: importerResult)
+            let url = try await flow.execute()
             await updateBinding { selectedIpaURL = url }
             
         case .accept:
-            break
+            guard let selectedIpaURL else { return }
+            await updateBinding { ipaProcessing = true }
+            let flow = FileAnalysingFlow(
+                ipaFileURL: selectedIpaURL,
+                shellService: shellService,
+                finderService: finderService,
+                localizationCollectorService: localizationCollectorService
+            )
+            let localizationCollection = try await flow.execute()
+            await updateBinding { ipaProcessing = false }
+            await navigationContext.push(page: ApplicationPage.analysisTranslations(localizationCollection: localizationCollection))
         }
     }
     
