@@ -27,8 +27,26 @@ struct AnalysisTranslationsLocalizationValueView: View {
                             .font(.system(size: 14))
                             .foregroundStyle(.black)
                             .frame(maxWidth: .infinity, alignment: .leading)
-                    case .plural:
-                        EmptyView()
+                        
+                    case let .plural(plural):
+                        if let zero = plural.zero {
+                            buildPluralCategoryRow(value: zero, title: "zero")
+                        }
+                        if let one = plural.one {
+                            buildPluralCategoryRow(value: one, title: "one")
+                        }
+                        if let two = plural.two {
+                            buildPluralCategoryRow(value: two, title: "two")
+                        }
+                        if let few = plural.few {
+                            buildPluralCategoryRow(value: few, title: "few")
+                        }
+                        if let many = plural.many {
+                            buildPluralCategoryRow(value: many, title: "many")
+                        }
+                        if let other = plural.other {
+                            buildPluralCategoryRow(value: other, title: "other")
+                        }
                     }
                 } else {
                     Text("Не определено")
@@ -43,16 +61,51 @@ struct AnalysisTranslationsLocalizationValueView: View {
         .asCardView()
     }
     
+    @ViewBuilder
+    private func buildPluralCategoryRow(
+        value: String,
+        title: String
+    ) -> some View {
+        HStack {
+            Group {
+                Text(value)
+                    .font(.system(size: 14))
+                    .foregroundStyle(.black) +
+                
+                Text(" (\(title))")
+                    .font(.system(size: 14))
+                    .foregroundStyle(.gray)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+        }
+    }
+    
 }
 
 #Preview {
     ZStack {
         Color.white
         
-        AnalysisTranslationsLocalizationValueView(
-            locale: Locale(identifier: "en"),
-            localizationValue: .single("Hello")
-        )
+        VStack {
+            AnalysisTranslationsLocalizationValueView(
+                locale: Locale(identifier: "en"),
+                localizationValue: .single("Hello")
+            )
+            
+            AnalysisTranslationsLocalizationValueView(
+                locale: Locale(identifier: "en"),
+                localizationValue: .plural(LocalizationPlural(
+                    localizedFormatKey: "%#@homes@",
+                    formatValueTypeKey: "d",
+                    zero: nil,
+                    one: "1 month ago",
+                    two: nil,
+                    few: nil,
+                    many: nil,
+                    other: "%d months ago")
+                )
+            )
+        }
         .padding(14)
     }
     .frame(width: 300, height: 300)

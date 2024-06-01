@@ -20,16 +20,25 @@ final class LocalizationCollection {
                 continue
             }
             
-            if let singleString = item.value as? String {
+            switch item.value {
+            case let singleString as String:
                 addValue(
                     .single(singleString),
                     forKey: key,
                     intoLocale: locale
                 )
-                continue
-            }
-            
-            if let pluralDictionary = item.value as? NSDictionary {
+                
+            case let dictionary as NSDictionary:
+                guard let plural = LocalizationPlural(dictionary: dictionary) else {
+                    continue
+                }
+                addValue(
+                    .plural(plural),
+                    forKey: key,
+                    intoLocale: locale
+                )
+                
+            default:
                 continue
             }
         }

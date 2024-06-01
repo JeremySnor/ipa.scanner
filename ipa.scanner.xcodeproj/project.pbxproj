@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D612E30D2C0ABC3A00160475 /* LocalizationPlural.swift in Sources */ = {isa = PBXBuildFile; fileRef = D612E30C2C0ABC3A00160475 /* LocalizationPlural.swift */; };
 		D6F7A3F52C01210400A8AB16 /* IpaScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A3F42C01210400A8AB16 /* IpaScannerApp.swift */; };
 		D6F7A3F92C01210600A8AB16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6F7A3F82C01210600A8AB16 /* Assets.xcassets */; };
 		D6F7A4092C01250900A8AB16 /* NavigationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7A4082C01250900A8AB16 /* NavigationContext.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D612E30C2C0ABC3A00160475 /* LocalizationPlural.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationPlural.swift; sourceTree = "<group>"; };
 		D6F7A3F12C01210400A8AB16 /* ipa.scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ipa.scanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F7A3F42C01210400A8AB16 /* IpaScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IpaScannerApp.swift; sourceTree = "<group>"; };
 		D6F7A3F82C01210600A8AB16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 				D6F7A4502C0389BD00A8AB16 /* LocalizationCollection.swift */,
 				D6F7A4522C03B6BF00A8AB16 /* LocalizationValue.swift */,
 				D6F7A4542C03B6D600A8AB16 /* Localization.swift */,
+				D612E30C2C0ABC3A00160475 /* LocalizationPlural.swift */,
 			);
 			path = LocalizationCollectorService;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				D6F7A4422C02A76F00A8AB16 /* ShellStatusCode.swift in Sources */,
 				D6F7A42F2C0275E200A8AB16 /* MainSelectFileAction.swift in Sources */,
 				D6F7A43E2C02A1A500A8AB16 /* ShellResult.swift in Sources */,
+				D612E30D2C0ABC3A00160475 /* LocalizationPlural.swift in Sources */,
 				D6F7A4292C026FDA00A8AB16 /* TextLabel.swift in Sources */,
 				D6F7A4372C028B5E00A8AB16 /* ShellService.swift in Sources */,
 				D6F7A45E2C03C2A000A8AB16 /* AnalysisTranslationsKeysListRow.swift in Sources */,

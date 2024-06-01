@@ -10,6 +10,6 @@ import Foundation
 enum LocalizationValue {
     
     case single(String)
-    case plural
+    case plural(LocalizationPlural)
     
 }
